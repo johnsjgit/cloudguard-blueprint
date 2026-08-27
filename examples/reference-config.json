@@ -1,0 +1,29 @@
+{
+  "workload": "ai-ready-reference",
+  "network": {
+    "public_access": false,
+    "ingress": "private"
+  },
+  "secrets": {
+    "provider": "managed-secret-store",
+    "inline_values": false
+  },
+  "security": {
+    "encryption_at_rest": true,
+    "encryption_in_transit": true,
+    "least_privilege": true
+  },
+  "logging": {
+    "audit_enabled": true,
+    "sensitive_payload_logging": false
+  },
+  "data": {
+    "classification": "confidential",
+    "retention_days": 30
+  },
+  "ai": {
+    "grounding_enabled": true,
+    "pii_redaction": true,
+    "human_review_required": true
+  }
+}
